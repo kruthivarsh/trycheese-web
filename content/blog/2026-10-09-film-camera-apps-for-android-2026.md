@@ -3,6 +3,7 @@ title: "Film camera apps for Android in 2026: what exists, and what's still miss
 slug: film-camera-apps-for-android-2026
 description: "The best-known film camera apps are still iPhone-only. Here's what Android shooters can use in October 2026, what separates a real film camera app from a filter app, and what to look for."
 date: 2026-10-09
+updated: 2026-10-11
 topic: android-film-cameras
 keyword: film camera app for Android
 tags: [android, film camera app, film looks, film grain, halation, mood.camera, lampa]
@@ -61,7 +62,7 @@ Whatever you install, these are the things that separate a convincing look from 
 
 1. **Processing at capture, not afterwards.** The look should be baked into the photo, not a preset applied to an already-processed image.
 2. **Grain that's rendered, not overlaid.** Real film grain varies with brightness and shouldn't repeat as a visible pattern.
-3. **Halation only where it belongs.** On film, the red-orange glow appears around bright light sources. An app that glows every edge is faking it.
+3. **Halation only where it belongs.** On film, the red-orange glow appears around bright light sources. An app that glows every edge is faking it. (Here's [what halation actually is, and how to spot a convincing version](/blog/what-is-halation).)
 4. **A filmic tone curve.** Highlights should roll off softly instead of clipping to white.
 5. **Real camera controls.** Exposure compensation, lens choice and aspect ratios matter more than a hundred presets.
 6. **Clear privacy.** You should know whether your photos ever leave the phone.
