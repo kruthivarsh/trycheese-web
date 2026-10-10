@@ -114,7 +114,7 @@ export function InTheMoment() {
             <span>Frame 07</span>
             <span>Developing</span>
           </div>
-          <FilmFrame frame={roll[0]} className="aspect-[4/5] w-full rounded-[22px]" />
+          <FilmFrame frame={roll[0]} sizes="(min-width: 1024px) 40vw, 90vw" className="aspect-[4/5] w-full rounded-[22px]" />
         </div>
       </div>
     </section>
@@ -151,7 +151,7 @@ export function Camera() {
 
       <div className="mt-14 grid gap-3 lg:grid-cols-6">
         <article className="relative overflow-hidden rounded-[22px] bg-surface lg:col-span-4 lg:row-span-2">
-          <FilmFrame frame={roll[6]} bare className="h-[480px] w-full sm:h-[440px] lg:h-full lg:min-h-[520px]" />
+          <FilmFrame frame={roll[6]} bare sizes="(min-width: 1024px) 60vw, 100vw" className="h-[480px] w-full sm:h-[440px] lg:h-full lg:min-h-[520px]" />
           <span className="rebate absolute right-4 top-4 rounded-full bg-darkroom/55 px-2.5 py-1 text-[12px] text-paper/80 backdrop-blur-sm">
             Placeholder · {roll[6].look}
           </span>
@@ -188,9 +188,9 @@ export function Camera() {
             Two shots, one frame. Blend them into something you couldn&rsquo;t have planned.
           </p>
           <div className="relative mt-6 h-24" aria-hidden>
-            <FilmFrame frame={roll[2]} bare className="absolute left-0 top-0 h-24 w-36 rounded-xl" />
+            <FilmFrame frame={roll[2]} bare sizes="144px" className="absolute left-0 top-0 h-24 w-36 rounded-xl" />
             <div className="absolute left-14 top-3 h-24 w-36 overflow-hidden rounded-xl mix-blend-screen">
-              <FilmFrame frame={roll[11]} bare className="h-full w-full" />
+              <FilmFrame frame={roll[11]} bare sizes="144px" className="h-full w-full" />
             </div>
           </div>
         </article>
@@ -229,7 +229,7 @@ function PhoneMock({ os }: { os: "iPhone" | "Android" }) {
           <span>Colour neg</span>
           <span>+1/3 EV</span>
         </div>
-        <FilmFrame frame={roll[9]} bare className="aspect-[3/4] w-full rounded-2xl" />
+        <FilmFrame frame={roll[9]} bare sizes="290px" className="aspect-[3/4] w-full rounded-2xl" />
         <div className="rebate mt-3 flex justify-center gap-4 text-[11px] text-paper/60">
           <span>0.5</span><span className="text-cheddar">1×</span><span>2</span>
         </div>

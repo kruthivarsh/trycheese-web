@@ -26,6 +26,7 @@ export function Hero() {
             key={frame.n}
             frame={frame}
             bare
+            priority
             className="h-[min(78svh,820px)] min-h-[520px] w-full"
           />
           <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_35%,rgba(18,16,14,0.78)_100%)]" />
@@ -73,7 +74,7 @@ export function Hero() {
                         : "opacity-70 outline-transparent hover:opacity-100"
                     }`}
                   >
-                    <FilmFrame frame={f} bare className="h-16 w-24 sm:h-20 sm:w-28" />
+                    <FilmFrame frame={f} bare sizes="112px" className="h-16 w-24 sm:h-20 sm:w-28" />
                     <span className="rebate absolute left-1.5 top-1 text-[11px] text-paper/90">
                       {pad(f.n)}
                     </span>
