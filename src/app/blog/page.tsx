@@ -4,14 +4,14 @@ import { Breadcrumbs, PostCard } from "@/components/blog-ui";
 import { allPosts } from "@/lib/blog/data";
 import { topics } from "@/lib/blog/topics";
 import { JsonLd, breadcrumbJsonLd } from "@/lib/jsonld";
-import { absoluteUrl } from "@/lib/site";
+import { OG_IMAGE, absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Journal — film looks, grain and phone photography | trycheese",
   description:
     "Notes on film looks, grain and halation, phone photography and film cameras on iPhone and Android, from the team building trycheese.",
   alternates: { canonical: "/blog", types: { "application/rss+xml": "/feed.xml" } },
-  openGraph: { type: "website", url: absoluteUrl("/blog") },
+  openGraph: { type: "website", url: absoluteUrl("/blog"), images: [OG_IMAGE] },
 };
 
 export default async function BlogIndex() {

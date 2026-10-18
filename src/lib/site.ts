@@ -9,3 +9,11 @@ export const SITE = {
 
 /** Absolute URL for a site path, e.g. absoluteUrl("/blog") → https://trycheese.app/blog */
 export const absoluteUrl = (path = "/") => `${SITE.url}${path === "/" ? "" : path}`;
+
+/** The brand share card (app/opengraph-image.png), for pages that set their own openGraph. */
+export const OG_IMAGE = {
+  url: "/opengraph-image.png",
+  width: 1200,
+  height: 630,
+  alt: "The trycheese Bubbly Cheese icon beside the trycheese wordmark and the line say cheese, it's already film.",
+} as const;

@@ -1,20 +1,37 @@
 @import "tailwindcss";
 
+/* trycheese palette, matched to the app (camera-project lib/app/theme/app_colors.dart)
+   and the Bubbly Cheese brand kit (design/brand-kit). */
 @theme {
-  --color-darkroom: #12100e;
-  --color-surface: #1b1815;
-  --color-raised: #24201c;
-  --color-line: #2f2a25;
+  /* Darkroom: the camera's own warm black, and the rind tones on it. */
+  --color-darkroom: #0c0c0b;
+  --color-surface: #1c1b19;
+  --color-raised: #26241f;
+  --color-line: #2a2724;
   --color-ink: #2a2420;
+  --color-ink-muted: #6b6259;
   --color-grain: #8a8178;
   --color-paper: #f3ede3;
-  --color-paper-dim: #c9c1b6;
-  --color-safelight: #e8452c;
-  --color-safelight-deep: #b8301b;
+  --color-paper-dim: #cfc6ba;
+
+  /* Cheese: the icon's yellow, with its light top-right and deep bottom-left ends. */
+  --color-cheese: #ffd21a;
+  --color-cheese-light: #ffe60c;
+  --color-cheese-deep: #ffc600;
+  --color-cream: #fff8e1;
+
+  /* The film negative's blue: "developing". */
+  --color-negative: #0d25aa;
+  --color-negative-bright: #7c93ff;
+
+  /* Look colours used as page colours, as in the app's onboarding. */
+  --color-gouda: #c8742b;
+  --color-smoked: #6e6760;
   --color-cheddar: #f4b63f;
 
+  --color-alert: #ff6b55;
+
   --font-display: var(--font-bricolage);
-  --font-serif: var(--font-instrument-serif);
   --font-sans: var(--font-instrument-sans);
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -37,12 +54,12 @@ body {
 }
 
 ::selection {
-  background: var(--color-safelight);
-  color: var(--color-paper);
+  background: var(--color-cheese);
+  color: var(--color-darkroom);
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-cheddar);
+  outline: 2px solid var(--color-cheese);
   outline-offset: 3px;
   border-radius: 6px;
 }
@@ -55,7 +72,7 @@ a {
   text-underline-offset: 0.2em;
 }
 
-/* The wordmark: Bricolage Grotesque 800, tracking -2% (brand/identity.md) */
+/* The wordmark: Bricolage Grotesque 800, tracking -2%, always lowercase. */
 .wordmark {
   font-family: var(--font-display);
   font-weight: 800;
@@ -64,20 +81,30 @@ a {
   line-height: 1;
 }
 
+/* One display face for every headline, as in the app: Bricolage Grotesque ExtraBold. */
 .display {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: -0.035em;
   font-variation-settings: "opsz" 96;
   line-height: 0.95;
   text-wrap: balance;
 }
 
+/* The second half of a headline stays in the display face and takes the page's
+   accent colour: cheese on dark and blue, ink on cheese, cream on Gouda.
+   Set --accent on a section to change it. */
 .accent {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: -0.01em;
+  color: var(--accent, var(--color-cheese));
+}
+
+/* The icon's 3D puff for big cheese surfaces (primary buttons, hero panel,
+   highlight cards): light from the top right, shade at the bottom left. */
+.puff {
+  background:
+    radial-gradient(90% 90% at 87.5% 7.5%, rgb(255 255 255 / 0.42), rgb(255 255 255 / 0) 70%),
+    radial-gradient(80% 80% at 10% 100%, rgb(150 96 0 / 0.18), rgb(150 96 0 / 0) 70%),
+    linear-gradient(199deg, var(--color-cheese-light), var(--color-cheese-deep));
 }
 
 /* Small labels and film-edge markings: Instrument Sans, sentence case */
@@ -99,7 +126,7 @@ a {
 .prose-tc > * + * { margin-top: 1.25em; }
 .prose-tc h2 {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 800;
   font-variation-settings: "opsz" 96;
   letter-spacing: -0.03em;
   font-size: clamp(1.75rem, 3vw, 2.4rem);
@@ -119,20 +146,22 @@ a {
 .prose-tc a:not(.heading-anchor) {
   color: var(--color-paper);
   text-decoration: underline;
-  text-decoration-color: rgb(232 69 44 / 0.7);
+  text-decoration-color: rgb(255 210 26 / 0.65);
   text-decoration-thickness: 1.5px;
 }
-.prose-tc a:not(.heading-anchor):hover { text-decoration-color: var(--color-safelight); }
+.prose-tc a:not(.heading-anchor):hover { text-decoration-color: var(--color-cheese); }
 .prose-tc strong { color: var(--color-paper); font-weight: 600; }
 .prose-tc ul { list-style: disc; padding-left: 1.3em; }
 .prose-tc ol { list-style: decimal; padding-left: 1.3em; }
 .prose-tc li + li { margin-top: 0.4em; }
 .prose-tc blockquote {
-  border-left: 1px solid var(--color-line);
+  border-left: 3px solid var(--color-cheese);
   padding-left: 1.2em;
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 1.2em;
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: 1.25em;
+  line-height: 1.3;
   color: var(--color-paper);
 }
 .prose-tc table { width: 100%; border-collapse: collapse; font-size: 16px; }
@@ -150,7 +179,8 @@ a {
   opacity: 0.35;
 }
 
-/* Signature interaction: develop-on-view. A frame starts latent and comes up. */
+/* Signature interaction: develop-on-view. A frame starts as a dim blue negative
+   (the app's "developing" colour) and comes up to full exposure. */
 .develop {
   transition:
     filter 1100ms var(--ease-develop),
@@ -158,7 +188,7 @@ a {
     opacity 900ms var(--ease-develop);
 }
 [data-state="latent"] .develop {
-  filter: brightness(0.32) sepia(1) saturate(2.4) hue-rotate(-28deg) blur(3px);
+  filter: brightness(0.38) sepia(1) saturate(3) hue-rotate(185deg) blur(3px);
   transform: scale(1.035);
 }
 [data-state="developed"] .develop {
@@ -176,5 +206,33 @@ a {
   [data-state="latent"] .develop {
     filter: none;
     transform: none;
+  }
+}
+
+/* Sticker marquee: the looks scroll past like a strip of labels. Pauses on
+   hover and stops for reduced motion. */
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+.marquee {
+  animation: marquee 48s linear infinite;
+}
+.marquee-wrap:hover .marquee {
+  animation-play-state: paused;
+}
+
+/* A twelve-point starburst sticker, turning slowly. */
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+.starburst {
+  clip-path: polygon(50% 0%, 59% 15%, 75% 7%, 75% 25%, 93% 25%, 85% 41%, 100% 50%, 85% 59%, 93% 75%, 75% 75%, 75% 93%, 59% 85%, 50% 100%, 41% 85%, 25% 93%, 25% 75%, 7% 75%, 15% 59%, 0% 50%, 15% 41%, 7% 25%, 25% 25%, 25% 7%, 41% 15%);
+  animation: spin-slow 30s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee,
+  .starburst {
+    animation: none;
   }
 }

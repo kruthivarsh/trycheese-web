@@ -9,7 +9,7 @@ export function PostCard({ post, large = false }: { post: Post; large?: boolean 
         <p className="rebate text-grain">
           <time dateTime={post.date}>{formatDate(post.date)}</time> · {topicName(post.topic)}
         </p>
-        <h3 className={`display mt-3 font-semibold ${large ? "text-[clamp(1.75rem,3vw,2.5rem)]" : "text-[clamp(1.35rem,2vw,1.75rem)]"}`}>
+        <h3 className={`display mt-3 ${large ? "text-[clamp(1.75rem,3vw,2.5rem)]" : "text-[clamp(1.35rem,2vw,1.75rem)]"}`}>
           <Link href={`/blog/${post.slug}`} className="after:absolute after:inset-0">
             {post.title}
           </Link>

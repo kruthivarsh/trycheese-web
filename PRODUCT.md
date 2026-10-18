@@ -30,14 +30,15 @@ Visitors arrive on phones and desktops, mostly from social posts and store-adjac
 
 - App status: pre-launch. Store links do not exist yet → badges are shown as "coming soon".
 - No backend → no email capture, no forms that submit anywhere.
-- Photos: none exist yet. Every photo slot on the site is a labelled placeholder until real trycheese shots are supplied.
-- Planned app capabilities (from the PRD, not yet shipped): own film looks, grain, halation, no live filter preview, no importing, EV / lenses / aspect ratios, portrait mode, double exposure, preset recipes shared by code/QR. Describe these as what the app does, never with invented numbers (e.g. no look count, no blend-mode count).
+- Photos: no real trycheese shots exist yet. Sample images are labelled "Sample" until real shots replace them.
+- Planned app capabilities (from the PRD, not yet shipped): own film looks, grain, halation, no live filter preview, no importing, EV / lenses / aspect ratios, portrait mode, double exposure, preset recipes shared by code/QR. Describe these as what the app does, never with invented numbers (the ten looks shown come from the app's own catalog; no blend-mode or other invented counts).
 
 ## Brand Commitments
 
-- Name: `trycheese`, always lowercase. Logo (for now): the wordmark in **Bricolage Grotesque 800**, tracking −2%.
-- Palette: Darkroom `#12100E`, Ink `#2A2420`, Paper `#F3EDE3`, Grain `#8A8178`, Safelight `#E8452C`, Cheddar `#F4B63F` (`brand/tokens.json`). Warm black, never pure `#000`.
-- Type: Bricolage Grotesque (display), Instrument Serif italic (emotional half of headlines, in Paper), Instrument Sans (UI/body), Instrument Sans 500 in sentence case for small labels and film-edge markings `trycheese ▸ 400 ▸ 01A` (IBM Plex Mono dropped by the user 2026-10-09: "looks vibe coded"). These were chosen by the user across the brand rounds and are binding.
+- Name: `trycheese`, always lowercase. Logo: the **Bubbly Cheese** icon (`public/brand`, from `design/brand-kit`) and the wordmark in **Bricolage Grotesque 800**, tracking −2%.
+- Palette (updated 2026-10-18 to match the app's Bubbly Cheese restyle, `camera-project` branch `trycheese-v1`, `lib/app/theme/app_colors.dart`): Darkroom `#0C0C0B`, Surface `#1C1B19`, Paper `#F3EDE3`, Grain `#8A8178`, **Cheese `#FFD21A`** (brand colour; big cheese surfaces use the icon's puff gradient `#FFE60C` → `#FFC600`), Cream `#FFF8E1`, Negative blue `#0D25AA` ("developing"), Gouda `#C8742B` and Smoked `#6E6760` as page colours, Alert `#FF6B55`. Safelight red is retired. Warm black, never pure `#000`.
+- Type (same date, matching the app): one display face, Bricolage Grotesque ExtraBold, for every headline; the second half of a headline stays in the display face and takes the section's accent colour (cheese on dark and blue, ink on cheese, cream on Gouda). Instrument Sans for UI and body, Instrument Sans 500 in sentence case for small labels and film-edge markings `trycheese ▸ 400 ▸ 01A`. Instrument Serif is retired.
+- Photos: the app's look samples (`public/samples`) are illustrative, not shot on trycheese; every one is labelled "Sample" on the site.
 - Voice: `brand/voice.md` — casual, playful, enthusiast-fluent; never fake nostalgia; looks are "looks", never "filters".
 - Reference the user made binding for structure: https://www.lampa.camera/ ("this website is how I want things"); neighbour: https://www.mood.camera/.
 
