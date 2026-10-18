@@ -5,7 +5,7 @@ import { Breadcrumbs, PostCard } from "@/components/blog-ui";
 import { topicPosts } from "@/lib/blog/data";
 import { topicBySlug, topics } from "@/lib/blog/topics";
 import { JsonLd, breadcrumbJsonLd } from "@/lib/jsonld";
-import { absoluteUrl } from "@/lib/site";
+import { OG_IMAGE, absoluteUrl } from "@/lib/site";
 
 export function generateStaticParams() {
   return topics.map((t) => ({ topic: t.slug }));
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: PageProps<"/blog/topic/[topic
     title: `${topic.name} — trycheese journal`,
     description: topic.description,
     alternates: { canonical: `/blog/topic/${topic.slug}` },
-    openGraph: { type: "website", url: absoluteUrl(`/blog/topic/${topic.slug}`) },
+    openGraph: { type: "website", url: absoluteUrl(`/blog/topic/${topic.slug}`), images: [OG_IMAGE] },
   };
 }
 

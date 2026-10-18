@@ -6,7 +6,7 @@ import { StoreBadges } from "@/components/store-badges";
 import { allPosts, postWithContext } from "@/lib/blog/data";
 import { formatDate, topicName } from "@/lib/blog/posts";
 import { JsonLd, breadcrumbJsonLd, postJsonLd } from "@/lib/jsonld";
-import { absoluteUrl } from "@/lib/site";
+import { OG_IMAGE, absoluteUrl } from "@/lib/site";
 
 export async function generateStaticParams() {
   return (await allPosts()).map((p) => ({ slug: p.slug }));
@@ -29,6 +29,7 @@ export async function generateMetadata({ params }: PageProps<"/blog/[slug]">): P
       publishedTime: post.date,
       modifiedTime: post.updated ?? post.date,
       tags: post.tags,
+      images: [OG_IMAGE],
     },
     twitter: { card: "summary_large_image", title: post.title, description: post.description },
   };
@@ -104,18 +105,18 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
             </section>
           )}
 
-          <aside className="mt-14 rounded-[22px] bg-paper p-7 text-ink sm:p-9">
-            <p className="display text-[clamp(1.6rem,3vw,2.25rem)] font-semibold">
+          <aside className="puff mt-14 rounded-[22px] p-7 text-darkroom sm:p-9">
+            <p className="display text-[clamp(1.6rem,3vw,2.25rem)]">
               Film looks, baked in at the shutter.
             </p>
-            <p className="mt-3 max-w-lg text-[16px] leading-relaxed text-ink/75">
+            <p className="mt-3 max-w-lg text-[16px] leading-relaxed text-darkroom/80">
               trycheese is a film camera for iPhone and Android: real grain, red
               halation and no live filter preview.{" "}
-              <Link className="underline decoration-ink/30" href="/#looks">See the looks</Link> or read{" "}
-              <Link className="underline decoration-ink/30" href="/#in-the-moment">why there&rsquo;s no preview</Link>.
+              <Link className="underline decoration-darkroom/40" href="/#looks">See the looks</Link> or read{" "}
+              <Link className="underline decoration-darkroom/40" href="/#in-the-moment">why there&rsquo;s no preview</Link>.
             </p>
             <div className="mt-6">
-              <StoreBadges tone="light" />
+              <StoreBadges tone="cheese" />
             </div>
           </aside>
         </div>

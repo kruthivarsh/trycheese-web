@@ -1,22 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import {
-  Bricolage_Grotesque,
-  Instrument_Sans,
-  Instrument_Serif,
-} from "next/font/google";
+import { Bricolage_Grotesque, Instrument_Sans } from "next/font/google";
 import "./globals.css";
 
 const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
   subsets: ["latin"],
   axes: ["opsz"],
-});
-
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument-serif",
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
 });
 
 const instrumentSans = Instrument_Sans({
@@ -38,14 +27,14 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#12100E",
+  themeColor: "#0C0C0B",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${bricolage.variable} ${instrumentSerif.variable} ${instrumentSans.variable}`}
+      className={`${bricolage.variable} ${instrumentSans.variable}`}
     >
       <body className="min-h-dvh">{children}</body>
     </html>

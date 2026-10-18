@@ -3,6 +3,7 @@ import Link from "next/link";
 const links = [
   { href: "/#looks", label: "Looks" },
   { href: "/#in-the-moment", label: "In the moment" },
+  { href: "/#app", label: "The app" },
   { href: "/#camera", label: "Camera" },
   { href: "/blog", label: "Journal" },
 ];
@@ -23,8 +24,8 @@ export function Nav() {
             </li>
           ))}
         </ul>
-        <span className="rounded-full border border-paper/15 px-3.5 py-1.5 text-[13px] text-paper/85">
-          Coming soon · iOS &amp; Android
+        <span className="whitespace-nowrap rounded-full bg-cheese px-3.5 py-1.5 text-[13px] font-semibold text-darkroom">
+          Coming soon<span className="hidden sm:inline"> · iOS &amp; Android</span>
         </span>
       </nav>
     </header>
