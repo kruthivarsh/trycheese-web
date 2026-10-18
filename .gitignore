@@ -42,3 +42,6 @@ next-env.d.ts
 
 # impeccable review captures (large, regenerated)
 /.impeccable/review/
+
+# competitor reference screenshots (local only, never publish)
+/moodcamera-screens/
