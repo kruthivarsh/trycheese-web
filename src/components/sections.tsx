@@ -453,23 +453,69 @@ export function Footer() {
           </ul>
         </div>
       </nav>
-      <div className="flex items-end gap-[clamp(0.75rem,2vw,2rem)]">
-        <Image
-          src="/brand/bubbly-cheese.svg"
-          alt="The trycheese Bubbly Cheese icon"
-          width={240}
-          height={240}
-          className="size-[clamp(4.5rem,16vw,14rem)] shrink-0"
+      <div className="relative -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-14 lg:px-14">
+        {/* A sample print ghosted in behind the credits. */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 bg-[url('/samples/f01.jpg')] bg-cover bg-[center_30%] opacity-[0.16] blur-md [mask-image:linear-gradient(180deg,transparent,#000_40%,#000_70%,transparent)]"
         />
-        <p className="wordmark text-[clamp(3.5rem,15vw,14rem)] leading-[0.85] text-paper">
-          trycheese
-        </p>
-      </div>
-      <div className="rebate mt-8 flex flex-col gap-3 text-grain lg:flex-row lg:items-center lg:justify-between">
-        <span>trycheese ▸ 400 ▸ 01A</span>
-        <span>say cheese. it&rsquo;s already film.</span>
-        <span>Coming soon to the App Store &amp; Google Play</span>
-        <span>© 2026 trycheese</span>
+
+        <div className="relative flex flex-col items-center gap-7 pb-14 pt-10">
+          <div className="flex items-center gap-[clamp(0.75rem,2vw,1.5rem)]">
+            <Image
+              src="/brand/cheese-mark-white.svg"
+              alt=""
+              width={944}
+              height={888}
+              className="h-auto w-[clamp(3.5rem,10vw,7.5rem)] shrink-0"
+            />
+            <div className="flex flex-col items-end">
+              <p className="wordmark text-[clamp(3.5rem,11vw,8rem)] leading-[0.9] text-paper">trycheese</p>
+              <p className="mt-1 text-[clamp(0.9rem,1.8vw,1.3rem)] text-paper">
+                <span className="font-semibold">Film camera</span> for iPhone &amp; Android
+              </p>
+            </div>
+          </div>
+          <p className="inline-flex items-center gap-2.5 text-[11px] font-light uppercase tracking-[0.16em] text-paper/60">
+            by
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo-overads.png" alt="overads" width={440} height={86} className="h-[15px] w-auto opacity-75" />
+          </p>
+        </div>
+
+        <div className="relative border-t border-line pb-2 pt-6">
+          <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-4">
+            <nav aria-label="Site files" className="flex flex-wrap gap-x-8 gap-y-3 text-[11.5px] uppercase tracking-[0.14em]">
+              <a className="text-paper/60 transition-colors hover:text-paper" href="/sitemap.xml">Sitemap</a>
+              <a className="text-paper/60 transition-colors hover:text-paper" href="/llms.txt">llms.txt</a>
+            </nav>
+            <a
+              className="inline-flex text-paper/60 transition-colors hover:text-paper"
+              href="mailto:support@trycheese.app"
+              aria-label="Email trycheese support"
+            >
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+                <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
+                <path d="m21 8-9 5.4L3 8" />
+              </svg>
+            </a>
+          </div>
+
+          <div className="mt-7 flex flex-col gap-2">
+            <p className="text-[12px] tracking-[0.03em] text-paper/55">Copyright ©2026 overads Inc. All rights reserved.</p>
+            <p className="max-w-[90ch] text-[10.5px] leading-[1.85] tracking-[0.01em] text-paper/30 text-pretty">
+              overads®, trycheese™ and the overads logo are trademarks of overads private limited (a subsidiary of
+              overads Inc.). Registered in India, with applications pending in the United States.
+            </p>
+            <p className="mt-1 inline-flex items-center gap-1.5 self-start whitespace-nowrap text-[11px] font-light uppercase tracking-[0.14em] text-paper/40 sm:self-end">
+              Made with{" "}
+              <svg className="h-[13px] w-[13px] flex-none text-paper/60" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.4 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9Z" />
+              </svg>
+              <span className="sr-only">love</span> in SF
+            </p>
+          </div>
+        </div>
       </div>
     </footer>
   );
