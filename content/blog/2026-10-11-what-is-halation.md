@@ -3,7 +3,7 @@ title: "What is halation? The red glow around lights, explained"
 slug: what-is-halation
 description: "What is halation? Why film puts a red-orange glow around streetlights, how it differs from bloom and lens flare, and how to spot a convincing digital version."
 date: 2026-10-11
-updated: 2026-10-19
+updated: 2026-10-20
 topic: grain-and-halation
 keyword: what is halation
 tags: [halation, film grain, film looks, bloom, cinestill 800t, film photography]
@@ -51,7 +51,7 @@ Most modern films are designed to suppress halation. They include an anti-halati
 
 The film everyone points to for halation does the opposite. **CineStill 800T** is made from motion-picture stock with its remjet backing removed, which lets regular labs develop it in standard C-41 chemistry. With the absorbing layer gone, bright point lights glow red: lamps, signs and reflections on wet streets in particular, as Unique Photo's profile of the film describes. That's why so many night-street photos have that unmistakable look.
 
-If you're curious about the wider world of analog film photography, it's a great rabbit hole. Halation is just one of many quirks that give each stock its character.
+If you're curious about the wider world of analog film photography, it's a great rabbit hole. Halation is just one of many quirks that give each stock its character. Here's [what else makes a photo look like film](/blog/what-makes-photos-look-like-film), from highlight roll-off to stock colour.
 
 ## Halation vs bloom vs lens flare
 

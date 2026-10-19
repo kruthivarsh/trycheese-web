@@ -3,6 +3,7 @@ title: "Why phone photos look overprocessed (and how to fix it)"
 slug: why-phone-photos-look-overprocessed
 description: "Why phone photos look overprocessed: HDR merging, sharpening and smoothing. Plus the settings that tone it down on iPhone, Pixel and Galaxy phones in 2026."
 date: 2026-10-19
+updated: 2026-10-20
 topic: phone-photography
 keyword: why phone photos look overprocessed
 tags: [phone photography, hdr, iphone, android, pixel, samsung, film looks]
@@ -105,7 +106,7 @@ Settings only get you part of the way. These work whatever you shoot on:
 
 ## What film does differently, and where trycheese fits
 
-Film was never trying to show you everything. Highlights roll off softly instead of being clawed back, shadows are allowed to go deep, and texture comes from grain rather than being smoothed away. Around bright lights you get [halation, the red glow film gives a streetlamp](/blog/what-is-halation), which is exactly what heavy HDR tends to flatten.
+Film was never trying to show you everything. Highlights roll off softly instead of being clawed back, shadows are allowed to go deep, and texture comes from grain rather than being smoothed away. (We break down [the six tells that make a photo look like film](/blog/what-makes-photos-look-like-film) in a separate post.) Around bright lights you get [halation, the red glow film gives a streetlamp](/blog/what-is-halation), which is exactly what heavy HDR tends to flatten.
 
 That's the feel we're after with [trycheese](/), a film camera app for iPhone and Android. Our [film looks](/#looks) bake grain, halation and a filmic tone curve into the photo at the shutter, and there's [no live filter preview](/#in-the-moment), so you watch the scene, not the settings. It isn't out yet. When it lands, it'll be free at launch on both stores.
 
