@@ -3,7 +3,7 @@ title: "Film camera apps for Android in 2026: what exists, and what's still miss
 slug: film-camera-apps-for-android-2026
 description: "The best-known film camera apps are still iPhone-only. Here's what Android shooters can use in October 2026, what separates a real film camera app from a filter app, and what to look for."
 date: 2026-10-09
-updated: 2026-10-11
+updated: 2026-10-19
 topic: android-film-cameras
 keyword: film camera app for Android
 tags: [android, film camera app, film looks, film grain, halation, mood.camera, lampa]
@@ -39,7 +39,7 @@ That reasoning is fair. Android runs on hundreds of phone models with different 
 
 They look similar in screenshots, but they work differently:
 
-- **A filter app** restyles a photo after the fact. It usually starts from the phone's own JPEG — already sharpened, HDR-blended and noise-reduced — and paints a look on top.
+- **A filter app** restyles a photo after the fact. It usually starts from the phone's own JPEG — already sharpened, HDR-blended and noise-reduced — and paints a look on top. (Here's [why phone photos look overprocessed in the first place](/blog/why-phone-photos-look-overprocessed), and which Pixel and Galaxy settings tone it down.)
 - **A film camera app** makes the look part of the capture. Colour, grain and halation are rendered into the photo at the shutter, and there's typically no live filter preview and no editing step afterwards. You shoot, and the photo comes out finished.
 
 That second approach is the one we explain on the trycheese homepage under [why there's no live preview](/#in-the-moment): the effects are too heavy to render accurately in real time, and not seeing them keeps you looking at the scene instead of the screen.
