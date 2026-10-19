@@ -469,18 +469,20 @@ export function Footer() {
               height={888}
               className="h-auto w-[clamp(3.5rem,10vw,7.5rem)] shrink-0"
             />
-            <div className="flex flex-col items-end">
+            <div className="flex flex-col">
               <p className="wordmark text-[clamp(3.5rem,11vw,8rem)] leading-[0.9] text-paper">trycheese</p>
-              <p className="mt-1 text-[clamp(0.9rem,1.8vw,1.3rem)] text-paper">
-                <span className="font-semibold">Film camera</span> for iPhone &amp; Android
-              </p>
+              <div className="mt-1 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+                <p className="order-2 inline-flex items-center gap-2.5 text-[11px] font-light uppercase tracking-[0.16em] text-paper/60 sm:order-1">
+                  by
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/logo-overads.png" alt="overads" width={440} height={86} className="h-[15px] w-auto translate-y-[2px] opacity-75" />
+                </p>
+                <p className="order-1 text-[clamp(0.9rem,1.8vw,1.3rem)] text-paper sm:order-2">
+                  <span className="font-semibold">Film camera</span> for iPhone &amp; Android
+                </p>
+              </div>
             </div>
           </div>
-          <p className="inline-flex items-center gap-2.5 text-[11px] font-light uppercase tracking-[0.16em] text-paper/60">
-            by
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo-overads.png" alt="overads" width={440} height={86} className="h-[15px] w-auto opacity-75" />
-          </p>
         </div>
 
         <div className="relative border-t border-line pb-2 pt-6">
