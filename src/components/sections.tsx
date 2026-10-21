@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Layers2, Lock, QrCode, ScanFace } from "lucide-react";
+import { Layers2, Lock, ScanFace, SlidersHorizontal } from "lucide-react";
 import { topics } from "@/lib/blog/topics";
 import { allPosts } from "@/lib/blog/data";
 import { PostCard } from "@/components/blog-ui";
 import { FilmFrame, SampleTag } from "@/components/film-frame";
 import { StoreBadges } from "@/components/store-badges";
 import { LOOKS, look } from "@/lib/looks";
+import { SITE } from "@/lib/site";
 
 /** A strip of look stickers scrolling past, between the hero and the manifesto. */
 export function LookMarquee() {
@@ -308,11 +309,11 @@ export function Camera() {
         </article>
 
         <article className="rounded-[22px] bg-surface p-6 sm:p-7 lg:col-span-2">
-          <QrCode className="size-6 text-cheese" strokeWidth={1.75} aria-hidden />
+          <SlidersHorizontal className="size-6 text-cheese" strokeWidth={1.75} aria-hidden />
           <h3 className="mt-4 text-[19px] font-semibold">Recipes you can share</h3>
           <p className="mt-2 text-[15px] leading-relaxed text-paper/70">
-            Build your own look from warmth, grain, halation and tone, then pass it on as a code or QR. Friends dial
-            it in, offline.
+            Build your own look from warmth, grain, halation and tone, save it as a recipe, and include it when you
+            share a photo to Community.
           </p>
         </article>
 
@@ -320,8 +321,8 @@ export function Camera() {
           <Lock className="size-6 text-darkroom" strokeWidth={1.75} aria-hidden />
           <h3 className="mt-4 text-[19px] font-semibold">Free and private</h3>
           <p className="mt-2 text-[15px] leading-relaxed text-darkroom/80">
-            No account, no subscription. Your photos stay on your phone until
-            you share them.
+            No subscription, no ads. Your photos stay on your phone until you
+            share them.
           </p>
         </article>
       </div>
@@ -422,7 +423,7 @@ export async function JournalTeaser() {
 export function Footer() {
   return (
     <footer className="mt-36 overflow-hidden border-t border-line px-5 pb-10 pt-16 sm:px-8 lg:px-14">
-      <nav aria-label="Footer" className="mb-16 grid gap-10 text-[15px] sm:grid-cols-3">
+      <nav aria-label="Footer" className="mb-16 grid gap-10 text-[15px] sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <p className="font-semibold text-paper">trycheese</p>
           <ul className="mt-4 space-y-2.5 text-paper/70">
@@ -450,6 +451,17 @@ export function Footer() {
             <li><a className="hover:text-paper" href="https://www.reddit.com/r/trycheese/" rel="noopener">r/trycheese</a></li>
             <li><a className="hover:text-paper" href="/feed.xml">RSS feed</a></li>
             <li><a className="hover:text-paper" href="/llms.txt">llms.txt</a></li>
+          </ul>
+        </div>
+        <div>
+          <p className="font-semibold text-paper">Help</p>
+          <ul className="mt-4 space-y-2.5 text-paper/70">
+            <li><Link className="hover:text-paper" href="/support">Support</Link></li>
+            <li><Link className="hover:text-paper" href="/privacy">Privacy policy</Link></li>
+            <li><Link className="hover:text-paper" href="/terms">Terms of Use</Link></li>
+            <li><Link className="hover:text-paper" href="/community-guidelines">Community guidelines</Link></li>
+            <li><Link className="hover:text-paper" href="/delete-account">Delete account</Link></li>
+            <li><a className="hover:text-paper" href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
           </ul>
         </div>
       </nav>

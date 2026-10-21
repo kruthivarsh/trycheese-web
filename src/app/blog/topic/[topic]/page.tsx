@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps<"/blog/topic/[topic
   const topic = topicBySlug((await params).topic);
   if (!topic) return {};
   return {
-    title: `${topic.name} — trycheese journal`,
+    title: `${topic.name} | trycheese journal`,
     description: topic.description,
     alternates: { canonical: `/blog/topic/${topic.slug}` },
     openGraph: { type: "website", url: absoluteUrl(`/blog/topic/${topic.slug}`), images: [OG_IMAGE] },
@@ -43,7 +43,7 @@ export default async function TopicPage({ params }: PageProps<"/blog/topic/[topi
         data={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          name: `${topic.name} — trycheese journal`,
+          name: `${topic.name} | trycheese journal`,
           description: topic.description,
           url: absoluteUrl(`/blog/topic/${topic.slug}`),
           hasPart: posts.map((p) => ({ "@type": "BlogPosting", headline: p.title, url: absoluteUrl(`/blog/${p.slug}`) })),

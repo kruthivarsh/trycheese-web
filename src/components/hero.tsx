@@ -32,7 +32,7 @@ export function Hero() {
               <StoreBadges tone="cheese" />
             </div>
             <p className="rebate mt-5 text-[13px] text-ink-muted">
-              Free. No account. Your photos stay on your phone.
+              Free. Your photos stay on your phone.
             </p>
           </div>
 
