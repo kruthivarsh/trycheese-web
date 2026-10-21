@@ -4,7 +4,7 @@ import { Mail } from "lucide-react";
 import { Breadcrumbs } from "@/components/blog-ui";
 import { formatDate } from "@/lib/blog/posts";
 import { JsonLd, breadcrumbJsonLd } from "@/lib/jsonld";
-import { OG_IMAGE, PAGE_UPDATED, SITE, absoluteUrl } from "@/lib/site";
+import { GRIEVANCE_OFFICER, OG_IMAGE, PAGE_UPDATED, SITE, absoluteUrl } from "@/lib/site";
 
 const UPDATED = PAGE_UPDATED.support;
 const DESCRIPTION =
@@ -38,6 +38,8 @@ function H2({ s }: { s: Section }) {
 }
 
 const mailto = `mailto:${SITE.email}`;
+/** A link inside the contact card, which sits outside .prose-tc. */
+const inlineLink = "text-paper underline decoration-cheese/50 underline-offset-4 hover:decoration-cheese";
 
 export default function SupportPage() {
   return (
@@ -80,6 +82,18 @@ export default function SupportPage() {
               Something broken? Tell us your phone model, its OS version and
               what you tapped. About your account? Write from the address you
               signed in with, or tell us your username.
+            </p>
+            <p className="mt-3 text-[15px] leading-relaxed text-paper/70">
+              Complaints under India&rsquo;s IT Rules go to our Grievance Officer,{" "}
+              {GRIEVANCE_OFFICER.name}, at{" "}
+              <a className={inlineLink} href={`mailto:${GRIEVANCE_OFFICER.email}`}>
+                {GRIEVANCE_OFFICER.email}
+              </a>
+              . The{" "}
+              <Link className={inlineLink} href="/privacy#grievance-officer">
+                privacy policy
+              </Link>{" "}
+              has the details.
             </p>
           </section>
 
@@ -234,7 +248,9 @@ export default function SupportPage() {
             <p>
               Your account has no email address (for example Sign in with Apple
               with no email shared)? <a href={mailto}>Email us</a> and tell us
-              your username.
+              your username. We check the request comes from the account&rsquo;s
+              owner first, and an account we delete because of an emailed
+              request is deleted for good straight away, without the 30 days.
             </p>
             <p>
               Lost a phone? Open <strong>Settings</strong>, tap your name under{" "}

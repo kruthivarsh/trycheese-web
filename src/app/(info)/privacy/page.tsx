@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/blog-ui";
-import { ToFill } from "@/components/to-fill";
 import { formatDate } from "@/lib/blog/posts";
 import { JsonLd, breadcrumbJsonLd } from "@/lib/jsonld";
-import { OG_IMAGE, PAGE_UPDATED, PRIVACY_DRAFT, SITE, absoluteUrl } from "@/lib/site";
+import {
+  COMPANY,
+  GRIEVANCE_OFFICER,
+  LEGAL_VERSION,
+  OG_IMAGE,
+  PAGE_UPDATED,
+  PRIVACY_DRAFT,
+  SITE,
+  absoluteUrl,
+} from "@/lib/site";
 
 // Before publishing: work through "0.1 Before the privacy policy goes live" in
 // store-assets/RELEASE-GUIDE.md (server, storage and provider checks that
@@ -54,6 +62,7 @@ function H2({ s }: { s: Section }) {
 }
 
 const mail = <a href={`mailto:${SITE.email}`}>{SITE.email}</a>;
+const grievanceMail = <a href={`mailto:${GRIEVANCE_OFFICER.email}`}>{GRIEVANCE_OFFICER.email}</a>;
 
 export default function PrivacyPage() {
   return (
@@ -87,24 +96,37 @@ export default function PrivacyPage() {
             <H2 s={S.who} />
             <p>
               trycheese is a film camera app for iPhone and Android. It&rsquo;s
-              run by{" "}
-              <ToFill page="/privacy">
-                legal name of the company or person running trycheese (the data
-                controller), registered address and country
-              </ToFill>
-              . In this policy, &ldquo;we&rdquo; and &ldquo;us&rdquo; means them.
+              run by {COMPANY.name}, a company registered in India and a
+              subsidiary of {COMPANY.parent}. {COMPANY.name} decides how your data is used:
+              it&rsquo;s the data controller (the data fiduciary, under
+              India&rsquo;s data protection law). In this policy, &ldquo;we&rdquo;
+              and &ldquo;us&rdquo; means {COMPANY.name}.
+            </p>
+            <p>Registered office: {COMPANY.address}.</p>
+            <p>
+              Questions about your data go to {mail}. We answer requests to
+              access, export or correct your data within 30 days.
+            </p>
+            <h3 id="grievance-officer">Grievance Officer</h3>
+            <p>
+              Under India&rsquo;s Information Technology Rules, 2021 and Digital
+              Personal Data Protection Act, 2023, our Grievance Officer is{" "}
+              {GRIEVANCE_OFFICER.name}. Write to {grievanceMail} with a complaint
+              about your data, a post or an account. We acknowledge complaints
+              within {GRIEVANCE_OFFICER.acknowledgeWithin} and resolve them
+              within {GRIEVANCE_OFFICER.resolveWithin}. If your complaint asks
+              us to remove a post, a profile or anything else on trycheese, we
+              resolve it within {GRIEVANCE_OFFICER.removalWithin}. If it&rsquo;s
+              about content that shows you nude, partly nude or in a sexual act,
+              or impersonates you (including morphed images), we remove it or
+              block access to it within 24 hours of your complaint.
             </p>
             <p>
-              Questions about your data go to {mail}.{" "}
-              <ToFill page="/privacy">
-                how quickly we answer requests to access, export or correct data
-              </ToFill>
-            </p>
-            <p>
-              <ToFill page="/privacy">
-                Data Protection Officer, Grievance Officer (India DPDP Act) or EU
-                or UK representative, if any
-              </ToFill>
+              If you&rsquo;re not happy with the Grievance Officer&rsquo;s
+              decision, you can appeal to the Grievance Appellate Committee set
+              up by the Government of India, at{" "}
+              <a href="https://gac.gov.in">gac.gov.in</a>, within 30 days of
+              receiving it.
             </p>
 
             <H2 s={S.noAccount} />
@@ -484,18 +506,17 @@ export default function PrivacyPage() {
             <ul>
               <li>
                 <strong>Amazon Web Services (AWS).</strong> Our API and its
-                database run on an AWS Lightsail server in{" "}
-                <ToFill page="/privacy">the Lightsail region</ToFill>. Shared photos are stored in
-                Amazon S3 in the Mumbai region (ap-south-1) and served worldwide
-                through Amazon CloudFront.
+                database run on an AWS Lightsail server in the Mumbai region
+                (ap-south-1), in India. Shared photos are stored in Amazon S3,
+                also in Mumbai (ap-south-1), and served worldwide through Amazon
+                CloudFront.
               </li>
               <li>
                 <strong>Resend</strong> sends our emails, over an encrypted
-                connection.{" "}
-                <ToFill page="/privacy">
-                  the region of the Resend account and sending domain, and how
-                  long Resend keeps sent-email logs
-                </ToFill>
+                connection, from AWS infrastructure in the United States. Resend
+                keeps its own logs of the emails it sends, including the address
+                each one went to and what it said (sign-in and deletion codes
+                included), under its own retention rules.
               </li>
               <li>
                 <strong>Apple and Google</strong> run Sign in with Apple and
@@ -524,11 +545,11 @@ export default function PrivacyPage() {
                 When you use{" "}
                 <Link href="/delete-account">delete your account</Link>, the email
                 address and code you enter, and your IP address, pass through
-                Vercel to our server.{" "}
-                <ToFill page="/privacy">
-                  the Vercel region the site runs in, and how long Vercel keeps
-                  request logs
-                </ToFill>
+                Vercel to our server. Vercel serves the site from its global
+                network, so your visit can be handled outside your country. The
+                delete your account form runs on Vercel&rsquo;s servers in the
+                United States, which pass what you enter to our server in India.
+                Vercel keeps its own request logs under its own retention rules.
               </li>
             </ul>
             <p>
@@ -536,11 +557,19 @@ export default function PrivacyPage() {
               us, under data processing terms that require them to protect it at
               least as well as this policy does.
             </p>
+            <h3 id="other-countries">When data leaves your country</h3>
             <p>
-              <ToFill page="/privacy">
-                how data is protected when it leaves your country (CloudFront edge
-                locations worldwide, Resend, Vercel, Apple and Google)
-              </ToFill>
+              Our server, database and photo storage are in India. If you live
+              somewhere else, your data is sent to India. Some of it is also
+              handled in other countries: CloudFront serves shared photos from
+              locations around the world, Resend sends our emails from the United
+              States, Vercel serves this website from its global network and
+              runs the delete your account form in the United States, Apple and
+              Google run their sign-in on their own systems, and on Android,
+              Google ML Kit sends Google diagnostics about itself. Data we
+              send to these services travels over encrypted connections. AWS,
+              Resend and Vercel handle it under the data processing terms above,
+              and Apple and Google under their own privacy policies.
             </p>
 
             <H2 s={S.moderation} />
@@ -666,18 +695,21 @@ export default function PrivacyPage() {
                 <a href={`#${S.delete.id}`}>below</a> have no time limit yet.
               </li>
               <li>
-                Our server logs don&rsquo;t record email addresses or codes. Our
-                email provider keeps its own sending logs (see{" "}
+                Our server logs record the server&rsquo;s status, errors and
+                warnings. Error entries can include an IP address, an account or
+                install ID and which part of our service a request was for. Our
+                API never logs your email address or codes, and the logs
+                aren&rsquo;t deleted on a schedule either. Our email provider and
+                website host keep their own logs (see{" "}
                 <a href={`#${S.providers.id}`}>who handles data for us</a>).
               </li>
             </ul>
             <p>
-              <ToFill page="/privacy">
-                intended retention periods for installs, events, session records,
-                unused uploads, old username records and deletion records, and whether we keep backups and server logs, and
-                for how long (a deleted account can survive in a backup until it
-                expires)
-              </ToFill>
+              We don&rsquo;t yet delete install records, usage events, session
+              records, unused uploads, old username records, deletion records or
+              server logs on a schedule. We review what we store at least once a
+              year and delete what we no longer need. We don&rsquo;t run separate
+              database backups.
             </p>
 
             <H2 s={S.delete} />
@@ -696,11 +728,12 @@ export default function PrivacyPage() {
               won&rsquo;t work: write to {mail} instead. We email you when the deletion is
               scheduled and if it&rsquo;s cancelled. Can&rsquo;t use either and
               your account has no email address? Email {mail} and tell us your
-              username.{" "}
-              <ToFill page="/privacy">
-                how we check an emailed deletion request comes from the
-                account&rsquo;s owner
-              </ToFill>
+              username. Before we act on an emailed request, we check it comes
+              from the account&rsquo;s owner (for example, that it was sent from
+              the email address on the account, if it has one), and we may ask
+              you for details that show the account is yours. An account we
+              delete because of an emailed request is deleted for good straight
+              away, without the 30 days.
             </p>
             <p>
               At once: every session ends, so all your phones are signed out.
@@ -756,7 +789,7 @@ export default function PrivacyPage() {
             </ul>
             <p>
               Copies of shared photos can also linger in caches for up to a year,
-              as described above, and in any backups. Photos, recipes and
+              as described above. Photos, recipes and
               settings on your phone aren&rsquo;t touched. When the account is
               deleted for good, we send a confirmation to the email address it
               had.
@@ -793,11 +826,16 @@ export default function PrivacyPage() {
               Google.
             </p>
             <p>
-              <ToFill page="/privacy">
-                the minimum age for using the app or having an account, and how
-                children&rsquo;s data is handled
-              </ToFill>{" "}
-              (see the <Link href="/terms">Terms of Use</Link>)
+              You must be at least 13 to use trycheese or have an account (see
+              the <Link href="/terms#agreeing">Terms of Use</Link>). We don&rsquo;t
+              allow accounts for children under 13, and if we find out an account
+              belongs to someone under 13, we delete it. If you&rsquo;re under 18,
+              you need a parent&rsquo;s or guardian&rsquo;s permission to use
+              trycheese where the law where you live requires it.
+            </p>
+            <p>
+              Think a child under 13 has an account? Email {mail} and tell us
+              their username.
             </p>
 
             <H2 s={S.security} />
@@ -862,18 +900,31 @@ export default function PrivacyPage() {
             <p>
               Depending on where you live, you may have rights to access, correct
               or delete your data, or to withdraw your consent. To ask, email{" "}
-              {mail}.{" "}
-              <ToFill page="/privacy">
-                governing law and jurisdiction, which privacy laws apply (for
-                example India&rsquo;s DPDP Act, GDPR or UK GDPR, CCPA), and the
-                legal basis for each purpose above
-              </ToFill>
+              {mail}. We answer within 30 days. If you&rsquo;re not happy with
+              our answer, write to our{" "}
+              <a href="#grievance-officer">Grievance Officer</a>. You can also
+              complain to the data protection authority where you live. In
+              India, once the complaint provisions of the Digital Personal Data
+              Protection Act, 2023 are in force, you can complain to the Data
+              Protection Board of India after first raising it with our
+              Grievance Officer.
+            </p>
+            <p>
+              trycheese is run from India, so we handle your data under Indian
+              law, including the Digital Personal Data Protection Act, 2023 and
+              the Information Technology Act, 2000 and their rules. If the GDPR or
+              UK GDPR applies to you, we rely on two legal bases: our contract
+              with you, to run your account, Community and the emails about them;
+              and our legitimate interests, to keep trycheese secure, limit
+              abuse, moderate Community and see how the app is used (the usage
+              data above). You can object to processing based on our legitimate
+              interests by emailing us.
             </p>
 
             <H2 s={S.website} />
             <p>
-              trycheese.app has no analytics or tracking scripts and no sign-up.
-              Its one form is{" "}
+              trycheese.app has no analytics or tracking scripts, sets no
+              cookies and has no sign-up. Its one form is{" "}
               <Link href="/delete-account">delete your account</Link>: the email
               address and code you enter, and your IP address, pass through our
               website host (<a href={`#${S.providers.id}`}>Vercel</a>) to our
@@ -885,21 +936,17 @@ export default function PrivacyPage() {
             <p>
               For help, see <Link href="/support">support</Link>.
             </p>
-            <p>
-              <ToFill page="/privacy">
-                cookies on trycheese.app: the site has no analytics packages, but
-                whether Vercel, our host, sets any cookies is unknown
-              </ToFill>
-            </p>
 
             <H2 s={S.changes} />
             <p>
+              This is version {LEGAL_VERSION.version} of this policy, in effect
+              from <time dateTime={LEGAL_VERSION.effective}>{formatDate(LEGAL_VERSION.effective)}</time>.
+              It covers the trycheese app from version 1.0.0, and this website.
+            </p>
+            <p>
               When this policy changes, we&rsquo;ll update this page and the date
-              at the top.{" "}
-              <ToFill page="/privacy">
-                effective date and version of this policy, the app version it
-                covers, and how people will be told about changes
-              </ToFill>
+              at the top. Before a material change takes effect, we&rsquo;ll
+              announce it on this website and in an update to the app.
             </p>
           </div>
         </div>

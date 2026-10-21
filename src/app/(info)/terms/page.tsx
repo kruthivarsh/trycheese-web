@@ -1,14 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/blog-ui";
-import { ToFill } from "@/components/to-fill";
 import { formatDate } from "@/lib/blog/posts";
 import { JsonLd, breadcrumbJsonLd } from "@/lib/jsonld";
-import { OG_IMAGE, PAGE_UPDATED, PRIVACY_DRAFT, SITE, absoluteUrl } from "@/lib/site";
+import {
+  COMPANY,
+  GRIEVANCE_OFFICER,
+  LEGAL_VERSION,
+  OG_IMAGE,
+  PAGE_UPDATED,
+  PRIVACY_DRAFT,
+  SITE,
+  absoluteUrl,
+} from "@/lib/site";
 
-// Shares PRIVACY_DRAFT with /privacy: noindex and out of the sitemap while any
-// [To fill in] item is left, and the build fails if one is left once it's false.
-// Keep it in step with the app's real rules (trycheese_be and camera-project).
+// Shares PRIVACY_DRAFT with /privacy: noindex and out of the sitemap while it's
+// true. Keep it in step with the app's real rules (trycheese_be and
+// camera-project), and the minimum age and report time in step with
+// /community-guidelines and /privacy.
 
 const UPDATED = PAGE_UPDATED.terms;
 const TITLE = "Terms of Use | trycheese";
@@ -56,8 +65,8 @@ function H2({ s }: { s: Section }) {
   return <h2 id={s.id}>{s.title}</h2>;
 }
 
-const PAGE = "/terms";
 const mail = <a href={`mailto:${SITE.email}`}>{SITE.email}</a>;
+const grievanceMail = <a href={`mailto:${GRIEVANCE_OFFICER.email}`}>{GRIEVANCE_OFFICER.email}</a>;
 
 export default function TermsPage() {
   return (
@@ -90,10 +99,11 @@ export default function TermsPage() {
             <H2 s={S.who} />
             <p>
               trycheese is a film camera app for iPhone and Android. trycheese is
-              made by{" "}
-              <ToFill page={PAGE}>legal entity name and registered address</ToFill>
-              . In these terms, &ldquo;we&rdquo; and &ldquo;us&rdquo; means them,
-              and &ldquo;you&rdquo; means you, the person using trycheese.
+              made by {COMPANY.name}, a company registered in India and a
+              subsidiary of {COMPANY.parent}. {COMPANY.name}&rsquo;s registered
+              office is at {COMPANY.address}. In these terms, &ldquo;we&rdquo; and
+              &ldquo;us&rdquo; means {COMPANY.name}, and &ldquo;you&rdquo; means
+              you, the person using trycheese.
             </p>
             <p>Questions about these terms go to {mail}.</p>
 
@@ -105,11 +115,10 @@ export default function TermsPage() {
               you don&rsquo;t agree, please don&rsquo;t use trycheese.
             </p>
             <p>
-              Minimum age:{" "}
-              <ToFill page={PAGE}>
-                minimum age to use trycheese and to have an account
-              </ToFill>
-              .
+              You must be at least 13 to use trycheese or have an account. We
+              delete accounts we find belong to someone under 13. If you&rsquo;re
+              under 18, you need a parent&rsquo;s or guardian&rsquo;s permission
+              to use trycheese where the law where you live requires it.
             </p>
 
             <H2 s={S.app} />
@@ -168,8 +177,8 @@ export default function TermsPage() {
               </li>
               <li>
                 The licence ends when you delete the post or your account is
-                deleted for good, except for copies in caches and backups that
-                expire on their own (see{" "}
+                deleted for good, except for copies in caches that expire on
+                their own (see{" "}
                 <Link href="/privacy#how-long-we-keep-it">how long we keep things</Link>
                 ).
               </li>
@@ -192,13 +201,9 @@ export default function TermsPage() {
             </p>
             <p>
               There&rsquo;s no tolerance for objectionable content or abusive
-              users. We act on reports within{" "}
-              <ToFill page={PAGE}>
-                how quickly we act on reports (Apple expects within 24 hours);
-                keep it the same as in the community guidelines
-              </ToFill>
-              , by removing content that breaks the guidelines, and we can
-              suspend or delete the account that posted it.
+              users. We act on reports within 24 hours, by removing content that
+              breaks the guidelines, and we can suspend or delete the account
+              that posted it.
             </p>
 
             <H2 s={S.moderation} />
@@ -255,22 +260,37 @@ export default function TermsPage() {
               </li>
               <li>Don&rsquo;t get into other people&rsquo;s accounts.</li>
               <li>Don&rsquo;t upload malware.</li>
+              <li>
+                Don&rsquo;t share anything that infringes someone&rsquo;s
+                copyright, trademark, patent or other rights.
+              </li>
+              <li>
+                Don&rsquo;t share anything you know is false or misleading, or
+                that misleads people about where it came from.
+              </li>
+              <li>
+                Don&rsquo;t share anything that threatens the unity, integrity,
+                defence, security or sovereignty of India, its relations with
+                other countries or public order, or that incites an offence.
+              </li>
             </ul>
 
             <H2 s={S.ours} />
             <p>
               The trycheese app, its looks, the trycheese name and the brand belong
-              to <ToFill page={PAGE}>legal entity name</ToFill>. Using trycheese
-              doesn&rsquo;t give you any rights to them beyond using the app as
-              these terms allow. The app includes open-source software; its
-              licences are listed in the app.
+              to {COMPANY.name}, apart from the open-source software and film
+              LUTs the app includes. Using trycheese doesn&rsquo;t give you any
+              rights to them beyond using the app as these terms allow. The
+              licences for the open-source parts are listed in the app.
             </p>
 
             <H2 s={S.stores} />
             <p>
-              You get the app from Apple&rsquo;s App Store or Google Play. These
-              terms are between you and us, not Apple or Google. If you got the
-              app from the App Store:
+              You get the app from Apple&rsquo;s App Store or Google Play.
+              trycheese is published on Google Play under the developer name WTMF
+              AI, and on the App Store under the seller name Knockverse Private
+              Limited. These terms are between you and us, not Apple or Google.
+              If you got the app from the App Store:
             </p>
             <ul>
               <li>Apple has no obligation to maintain or support the app.</li>
@@ -293,22 +313,48 @@ export default function TermsPage() {
 
             <H2 s={S.disclaimers} />
             <p>
-              trycheese is provided as is, to the extent the law allows.{" "}
-              <ToFill page={PAGE}>disclaimer wording for the governing law</ToFill>
+              To the extent the law allows, the trycheese app and this website
+              are provided &ldquo;as is&rdquo; and &ldquo;as available&rdquo;,
+              without warranties of any kind, express or implied, including that
+              they&rsquo;re fit for a particular purpose. We don&rsquo;t promise
+              that they&rsquo;ll always be available or free of errors, or that
+              what you share won&rsquo;t be lost.
+            </p>
+            <p>
+              Nothing in these terms takes away rights you have under consumer
+              law that can&rsquo;t be excluded.
             </p>
 
             <H2 s={S.liability} />
+            <p>To the extent the law allows:</p>
+            <ul>
+              <li>
+                we aren&rsquo;t liable for indirect or consequential loss, such as
+                lost profits, lost data or harm to reputation
+              </li>
+              <li>
+                our total liability to you for all claims about trycheese is
+                limited to the greater of what you paid us in the 12 months
+                before the claim (trycheese is free, so normally INR 0) or INR
+                1,000
+              </li>
+            </ul>
             <p>
-              <ToFill page={PAGE}>liability cap and exclusions</ToFill>
+              Nothing in these terms limits liability that the law doesn&rsquo;t
+              allow to be limited, for example for fraud, or for death or
+              personal injury caused by negligence.
             </p>
 
             <H2 s={S.changes} />
             <p>
+              These terms are version {LEGAL_VERSION.version}, in effect from{" "}
+              <time dateTime={LEGAL_VERSION.effective}>{formatDate(LEGAL_VERSION.effective)}</time>.
+            </p>
+            <p>
               When these terms change, we update this page and the date at the
-              top.{" "}
-              <ToFill page={PAGE}>
-                effective date, and how people are told about material changes
-              </ToFill>
+              top. Before a material change takes effect, we&rsquo;ll announce it
+              on this website and in an update to the app. If you keep using
+              trycheese after a change takes effect, the new terms apply to you.
             </p>
 
             <H2 s={S.ending} />
@@ -321,11 +367,38 @@ export default function TermsPage() {
 
             <H2 s={S.law} />
             <p>
-              <ToFill page={PAGE}>governing law, courts and venue</ToFill>
+              These terms are governed by the laws of India. The courts in
+              Hyderabad, Telangana, have exclusive jurisdiction over any dispute
+              about these terms or trycheese. This doesn&rsquo;t take away the
+              protection of mandatory consumer laws where you live.
             </p>
 
             <H2 s={S.contact} />
             <p>Email {mail}.</p>
+            <p>
+              {COMPANY.name}, {COMPANY.address}.
+            </p>
+            <p>
+              <strong>Grievance Officer.</strong> Under India&rsquo;s Information
+              Technology Rules, 2021 and Digital Personal Data Protection Act,
+              2023, our Grievance Officer is {GRIEVANCE_OFFICER.name}. Write to{" "}
+              {grievanceMail} with a complaint about trycheese, a post or an
+              account. We acknowledge complaints within{" "}
+              {GRIEVANCE_OFFICER.acknowledgeWithin} and resolve them within{" "}
+              {GRIEVANCE_OFFICER.resolveWithin}. If your complaint asks us to
+              remove a post, a profile or anything else on trycheese, we resolve
+              it within {GRIEVANCE_OFFICER.removalWithin}. If it&rsquo;s about
+              content that shows you nude, partly nude or in a sexual act, or
+              impersonates you (including morphed images), we remove it or block
+              access to it within 24 hours of your complaint.
+            </p>
+            <p>
+              If you&rsquo;re not happy with the Grievance Officer&rsquo;s
+              decision, you can appeal to the Grievance Appellate Committee set
+              up by the Government of India, at{" "}
+              <a href="https://gac.gov.in">gac.gov.in</a>, within 30 days of
+              receiving it.
+            </p>
           </div>
         </div>
 

@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/blog-ui";
-import { ToFill } from "@/components/to-fill";
 import { formatDate } from "@/lib/blog/posts";
 import { JsonLd, breadcrumbJsonLd } from "@/lib/jsonld";
-import { OG_IMAGE, PAGE_UPDATED, PRIVACY_DRAFT, SITE, absoluteUrl } from "@/lib/site";
+import { GRIEVANCE_OFFICER, OG_IMAGE, PAGE_UPDATED, PRIVACY_DRAFT, SITE, absoluteUrl } from "@/lib/site";
 
 // Shares PRIVACY_DRAFT with /privacy and /terms: noindex and out of the
-// sitemap until every [To fill in] item on those pages is filled in. Its own
-// item is how quickly reports are acted on (keep it the same as in the Terms);
-// the minimum age lives in the Terms.
+// sitemap while it's true. Keep the report time (24 hours) the same as in the
+// Terms, and the minimum age (13) the same as in the Terms and /privacy.
 // Keep it in step with the app's real moderation (trycheese_be community module).
 
 const UPDATED = PAGE_UPDATED.communityGuidelines;
@@ -112,6 +110,12 @@ export default function CommunityGuidelinesPage() {
               <li>other people&rsquo;s photos</li>
               <li>other people&rsquo;s personal information</li>
               <li>photos of people in private moments without their agreement</li>
+              <li>anything that infringes someone&rsquo;s copyright or trademark</li>
+              <li>things you know are false or misleading</li>
+              <li>
+                anything that threatens public order or national security, or
+                incites a crime
+              </li>
             </ul>
 
             <H2 s={S.profiles} />
@@ -132,13 +136,9 @@ export default function CommunityGuidelinesPage() {
             <ul>
               <li>
                 Report a post from its menu: spam, nudity, harassment or
-                something else. Our team looks at every report within{" "}
-                <ToFill page="/community-guidelines">
-                  how quickly we act on reports (Apple expects within 24 hours);
-                  keep it the same as in the Terms of Use
-                </ToFill>{" "}
-                and removes content that breaks these rules. Reports are
-                private.
+                something else. We act on reports within 24 hours: our team
+                looks at every report and removes content that breaks these
+                rules. Reports are private.
               </li>
               <li>
                 Block someone to hide their posts from your feed. They
@@ -166,11 +166,34 @@ export default function CommunityGuidelinesPage() {
               Write to {mail} and tell us your username and what happened.
               We&rsquo;ll take another look.
             </p>
+            <p>
+              You can also complain to our Grievance Officer,{" "}
+              {GRIEVANCE_OFFICER.name}, at{" "}
+              <a href={`mailto:${GRIEVANCE_OFFICER.email}`}>{GRIEVANCE_OFFICER.email}</a>.
+              We acknowledge
+              complaints within {GRIEVANCE_OFFICER.acknowledgeWithin} and resolve
+              them within {GRIEVANCE_OFFICER.resolveWithin}. If your complaint
+              asks us to remove a post, a profile or anything else on trycheese,
+              we resolve it within {GRIEVANCE_OFFICER.removalWithin}. If
+              it&rsquo;s about content that shows you nude, partly nude or in a
+              sexual act, or impersonates you (including morphed images), we
+              remove it or block access to it within 24 hours of your complaint.
+            </p>
+            <p>
+              If you&rsquo;re not happy with the Grievance Officer&rsquo;s
+              decision, you can appeal to the Grievance Appellate Committee set
+              up by the Government of India, at{" "}
+              <a href="https://gac.gov.in">gac.gov.in</a>, within 30 days of
+              receiving it.
+            </p>
 
             <H2 s={S.age} />
             <p>
-              You must meet the minimum age in our{" "}
-              <Link href="/terms#agreeing">Terms of Use</Link> to use trycheese.
+              You must be at least 13 to use trycheese (see our{" "}
+              <Link href="/terms#agreeing">Terms of Use</Link>). We delete
+              accounts we find belong to someone under 13. If you&rsquo;re under
+              18, you need a parent&rsquo;s or guardian&rsquo;s permission to use
+              trycheese where the law where you live requires it.
             </p>
           </div>
         </div>
