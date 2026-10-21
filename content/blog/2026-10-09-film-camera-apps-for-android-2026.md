@@ -3,7 +3,7 @@ title: "Film camera apps for Android in 2026: what exists, and what's still miss
 slug: film-camera-apps-for-android-2026
 description: "The best-known film camera apps are still iPhone-only. Here's what Android shooters can use in October 2026, what separates a real film camera app from a filter app, and what to look for."
 date: 2026-10-09
-updated: 2026-10-19
+updated: 2026-10-21
 topic: android-film-cameras
 keyword: film camera app for Android
 tags: [android, film camera app, film looks, film grain, halation, mood.camera, lampa]
@@ -52,7 +52,7 @@ Beyond that, most of what you'll find by searching "film camera" on the Play Sto
 
 ## Why film looks on a phone at all
 
-Part of the appeal is cost. Analog.Cafe's Film Price Report for Q3 2026 found prices across 37 tracked film stocks up 2.5% since January, with film now 6% more expensive in Europe and Canada, and a 36-exposure roll of Kodak Gold 200 averaging $10.34. Real film is stable in price but not cheap, and that's before developing and scanning.
+Part of the appeal is cost. Analog.Cafe's Film Price Report for Q3 2026 found prices across 37 tracked film stocks up 2.5% since January, with film now 6% more expensive in Europe and Canada, and a 36-exposure roll of Kodak Gold 200 averaging $10.34. Real film is stable in price but not cheap, and that's before developing and scanning. Kodak also renamed some of its best-known films this year, so here's [what Ektacolor Pro and Ektapan replace](/blog/ektacolor-pro-vs-portra).
 
 A good phone film look isn't a replacement for shooting real film photography — it's a way to get some of that character every day, on the camera you already carry.
 

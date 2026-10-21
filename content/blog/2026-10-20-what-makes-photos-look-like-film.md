@@ -3,6 +3,7 @@ title: "What makes a photo look like film? 6 tells, explained"
 slug: what-makes-photos-look-like-film
 description: "What makes a photo look like film? Highlight roll-off, stock colour, grain, halation and softness: how each one works, and how to spot a fake film look."
 date: 2026-10-20
+updated: 2026-10-21
 topic: film-looks
 keyword: what makes a photo look like film
 tags: [film looks, film grain, halation, colour negative, slide film, phone photography]
@@ -55,7 +56,7 @@ Shadows behave the other way round from a modern phone. Film lets them sit dark,
 
 On film you don't pick a colour grade after the fact. You pick a stock before you shoot, and it decides how skin, foliage and sky render.
 
-Kodak describes Portra 400 as delivering spectacular skin tones and exceptional colour saturation across a wide range of lighting. That's a promise about colour response, not a tint: warm skin stays warm without turning the whole frame orange.
+Kodak describes Portra 400 as delivering spectacular skin tones and exceptional colour saturation across a wide range of lighting. That's a promise about colour response, not a tint: warm skin stays warm without turning the whole frame orange. (Portra is now also sold as Ektacolor Pro. Here's [what Kodak's new film names mean](/blog/ektacolor-pro-vs-portra).)
 
 Slide film is a different animal. Fujifilm's own film simulations make the split clear. Its Provia, Velvia and Astia modes were designed to deliver the deep colour tones of reversal (slide) film, while its Pro Neg modes emphasise skin tones. In Dehancer's highlight tool, the same split shows up as a single control: one end approximates negative film's paler highlights, the other end slide film's denser ones.
 
