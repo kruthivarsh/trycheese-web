@@ -15,7 +15,7 @@ const instrumentSans = Instrument_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://trycheese.app"),
-  title: "trycheese — a film camera for iPhone and Android",
+  title: "trycheese: a film camera for iPhone and Android",
   description:
     "Real grain, red halation and filmic colour, baked in at the shutter. No live filter preview, no editing. Coming soon to the App Store and Google Play.",
   alternates: {

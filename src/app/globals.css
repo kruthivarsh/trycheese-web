@@ -135,6 +135,8 @@ a {
   margin-top: 2.2em;
   scroll-margin-top: 6rem;
 }
+/* The block's own top margin sets the gap; a leading heading adds none. */
+.prose-tc > h2:first-child { margin-top: 0; }
 .prose-tc h3 {
   font-weight: 600;
   font-size: 20px;

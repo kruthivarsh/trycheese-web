@@ -8,19 +8,19 @@ topic: android-film-cameras
 keyword: film camera app for Android
 tags: [android, film camera app, film looks, film grain, halation, mood.camera, lampa]
 sources:
-  - title: "mood.camera — FAQ: Is there an Android version?"
+  - title: "mood.camera FAQ: Is there an Android version?"
     url: https://www.mood.camera/
-  - title: "Lampa — the iPhone camera built for an analog feel"
+  - title: "Lampa: the iPhone camera built for an analog feel"
     url: https://www.lampa.camera/
   - title: "ELMAR on Product Hunt (launched 2 May 2026)"
     url: https://www.producthunt.com/products/elmar/launches/elmar
-  - title: "Analog.Cafe — Film Price Report Q3 2026 (9 July 2026)"
+  - title: "Analog.Cafe: Film Price Report Q3 2026 (9 July 2026)"
     url: https://www.analog.cafe/r/the-growing-global-film-price-divide-5qzt
 faq:
   - q: "Is there a mood.camera app for Android?"
     a: "No. As of October 2026, mood.camera's own FAQ says it is being developed for iPhone only for the foreseeable future."
   - q: "What's the difference between a film filter app and a film camera app?"
-    a: "A filter app restyles a photo after it has been taken, usually on top of the phone's already-processed image. A film camera app applies the look as part of capture — colour, grain and halation are rendered into the photo when you press the shutter, and there is usually no editing step afterwards."
+    a: "A filter app restyles a photo after it has been taken, usually on top of the phone's already-processed image. A film camera app applies the look as part of capture: colour, grain and halation are rendered into the photo when you press the shutter, and there is usually no editing step afterwards."
   - q: "Can a phone really produce film-like grain and halation?"
     a: "It can get close when grain is rendered per photo rather than laid over it as a texture, and when halation is applied only around the brightest highlights instead of as a general glow."
 ---
@@ -39,7 +39,7 @@ That reasoning is fair. Android runs on hundreds of phone models with different 
 
 They look similar in screenshots, but they work differently:
 
-- **A filter app** restyles a photo after the fact. It usually starts from the phone's own JPEG — already sharpened, HDR-blended and noise-reduced — and paints a look on top. (Here's [why phone photos look overprocessed in the first place](/blog/why-phone-photos-look-overprocessed), and which Pixel and Galaxy settings tone it down.)
+- **A filter app** restyles a photo after the fact. It usually starts from the phone's own JPEG (already sharpened, HDR-blended and noise-reduced) and paints a look on top. Here's [why phone photos look overprocessed in the first place](/blog/why-phone-photos-look-overprocessed), and which Pixel and Galaxy settings tone it down.
 - **A film camera app** makes the look part of the capture. Colour, grain and halation are rendered into the photo at the shutter, and there's typically no live filter preview and no editing step afterwards. You shoot, and the photo comes out finished.
 
 That second approach is the one we explain on the trycheese homepage under [why there's no live preview](/#in-the-moment): the effects are too heavy to render accurately in real time, and not seeing them keeps you looking at the scene instead of the screen.
@@ -48,13 +48,13 @@ That second approach is the one we explain on the trycheese homepage under [why 
 
 The clearest new arrival this year is **ELMAR**, an Android-only film camera app that launched on Product Hunt on 2 May 2026. Its listing names film simulations inspired by Kodak Portra, Fuji Pro 400H, Velvia and Cinestill 800T (seven looks in total), a 28/35/50/75mm focal length selector, a lens effect modelled on the Leica Elmar 50mm, and a scan mode that inverts real developed negatives through the phone's camera. It's a good sign: developers are starting to treat Android as a first-class film camera platform rather than an afterthought.
 
-Beyond that, most of what you'll find by searching "film camera" on the Play Store sits in the filter-app category described above. That isn't a criticism of those apps — they're useful — but if what you want is the iPhone-style "it's already film" experience, check the listing carefully before you install.
+Beyond that, most of what you'll find by searching "film camera" on the Play Store sits in the filter-app category described above. That isn't a criticism of those apps (they're useful), but if what you want is the iPhone-style "it's already film" experience, check the listing carefully before you install.
 
 ## Why film looks on a phone at all
 
 Part of the appeal is cost. Analog.Cafe's Film Price Report for Q3 2026 found prices across 37 tracked film stocks up 2.5% since January, with film now 6% more expensive in Europe and Canada, and a 36-exposure roll of Kodak Gold 200 averaging $10.34. Real film is stable in price but not cheap, and that's before developing and scanning. Kodak also renamed some of its best-known films this year, so here's [what Ektacolor Pro and Ektapan replace](/blog/ektacolor-pro-vs-portra).
 
-A good phone film look isn't a replacement for shooting real film photography — it's a way to get some of that character every day, on the camera you already carry.
+A good phone film look isn't a replacement for shooting real film photography. It's a way to get some of that character every day, on the camera you already carry.
 
 ## What to look for in an Android film camera app
 
@@ -69,6 +69,6 @@ Whatever you install, these are the things that separate a convincing look from 
 
 ## Where trycheese fits
 
-We're building [trycheese](/) for iPhone **and** Android, launching on both stores together — same [film looks](/#looks), same grain and halation, same [camera controls](/#camera) on both. It isn't out yet, so it doesn't belong in a "what you can install today" list. When it is, it'll be free at launch, with no account and no live filter preview.
+We're building [trycheese](/) for iPhone **and** Android, launching on both stores together, with the same [film looks](/#looks), the same grain and halation and the same [camera controls](/#camera) on both. It isn't out yet, so it doesn't belong in a "what you can install today" list. When it is, it'll be free at launch, with no subscription and no live filter preview.
 
 Until then, if you're on Android: try what's there, check how each app handles grain and highlights, and keep an eye on this journal. We'll update this post as the Android landscape changes.
