@@ -8,21 +8,21 @@ topic: phone-photography
 keyword: why phone photos look overprocessed
 tags: [phone photography, hdr, iphone, android, pixel, samsung, film looks]
 sources:
-  - title: "Adjust HDR camera settings on iPhone — Apple Support"
+  - title: "Apple Support: Adjust HDR camera settings on iPhone"
     url: https://support.apple.com/guide/iphone/adjust-hdr-camera-settings-iph2cafe2ebc/ios
-  - title: "Use Photographic Styles with your iPhone camera — Apple Support"
+  - title: "Apple Support: Use Photographic Styles with your iPhone camera"
     url: https://support.apple.com/guide/iphone/use-photographic-styles-iph629d2cd37/ios
-  - title: "About Apple ProRAW — Apple Support"
+  - title: "Apple Support: About Apple ProRAW"
     url: https://support.apple.com/en-us/119916
-  - title: "Apple Quietly Excludes Older iPhones From New Camera Feature — MacRumors (22 September 2026)"
+  - title: "MacRumors: Apple Quietly Excludes Older iPhones From New Camera Feature (22 September 2026)"
     url: https://macrumors.com/2026/09/22/apple-backtracks-camera-feature-compatibility
-  - title: "7 can't-miss updates from our Pixel 11 launch — Google"
+  - title: "Google: 7 can't-miss updates from our Pixel 11 launch"
     url: https://blog.google/products-and-platforms/devices/pixel/pixel-11-features/
-  - title: "Change your Camera app settings — Pixel Camera Help"
+  - title: "Pixel Camera Help: Change your Camera app settings"
     url: https://support.google.com/pixelcamera/answer/2838995?hl=en
-  - title: "How to use Camera Assistant on your Galaxy S23 Ultra — Samsung UK (updated 23 May 2023)"
+  - title: "Samsung UK: How to use Camera Assistant on your Galaxy S23 Ultra (updated 23 May 2023)"
     url: https://www.samsung.com/uk/support/mobile-devices/how-to-use-camera-assistant-on-your-galaxy-s23-ultra/
-  - title: "Process Zero: The Anti-Intelligent Camera — Lux (14 August 2024)"
+  - title: "Lux: Process Zero: The Anti-Intelligent Camera (14 August 2024)"
     url: https://www.lux.camera/introducing-process-zero-for-iphone/
 faq:
   - q: "Can you turn off HDR on an iPhone?"

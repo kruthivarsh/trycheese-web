@@ -8,21 +8,21 @@ topic: film-photography
 keyword: Ektacolor Pro vs Portra
 tags: [film photography, kodak, portra, ektacolor pro, ektapan, colour negative]
 sources:
-  - title: "EKTACOLOR PRO 400 Film — Kodak"
+  - title: "Kodak: EKTACOLOR PRO 400 Film"
     url: https://www.kodak.com/en/still-film/product/professional/ektacolor/ektacolor-pro-400-film/
-  - title: "EKTAPAN — Kodak"
+  - title: "Kodak: EKTAPAN"
     url: https://www.kodak.com/en/still-film/products/professional/ektapan/
-  - title: "Still film products — Kodak"
+  - title: "Kodak: Still film products"
     url: https://www.kodak.com/en/still-film/products/
-  - title: "Kodak Professional Portra 400 Film, technical data E-4050 — Kodak Alaris (January 2025)"
+  - title: "Kodak Alaris: Kodak Professional Portra 400 Film, technical data E-4050 (January 2025)"
     url: https://kodakprofessional.com/sites/default/files/2025-07/e4050.pdf
-  - title: "Photographers — Kodak Alaris"
+  - title: "Kodak Alaris: Photographers"
     url: https://kodakprofessional.com/
-  - title: "Kodak Launches Ektacolor Pro and Ektapan Film: Portra and T-Max Get New Names — PhotoWorkout (26 March 2026)"
+  - title: "PhotoWorkout: Kodak Launches Ektacolor Pro and Ektapan Film: Portra and T-Max Get New Names (26 March 2026)"
     url: https://www.photoworkout.com/kodak-ektacolor-pro-ektapan-film/
-  - title: "Kodak Renames Portra and T-Max — Fuji X Weekly (26 March 2026)"
+  - title: "Fuji X Weekly: Kodak Renames Portra and T-Max (26 March 2026)"
     url: https://fujixweekly.com/2026/03/26/kodak-renames-portra-and-t-max/
-  - title: "Kodak's camera films have just changed names – and they come from a different Kodak. Confused? — Digital Camera World (27 May 2026)"
+  - title: "Digital Camera World: Kodak's camera films have just changed names – and they come from a different Kodak. Confused? (27 May 2026)"
     url: https://www.digitalcameraworld.com/cameras/film-cameras/kodaks-camera-films-have-just-changed-names-and-they-come-from-a-different-kodak-confused
 faq:
   - q: "Is Kodak Ektacolor Pro the same as Portra?"

@@ -8,13 +8,13 @@ topic: grain-and-halation
 keyword: what is halation
 tags: [halation, film grain, film looks, bloom, cinestill 800t, film photography]
 sources:
-  - title: "Halation in Film Photography, Explained — Analog.Cafe (23 July 2025)"
+  - title: "Analog.Cafe: Halation in Film Photography, Explained (23 July 2025)"
     url: https://www.analog.cafe/r/halation-in-film-photography-i3q4
-  - title: "Halation and its simulation in Dehancer — Dehancer Blog"
+  - title: "Dehancer Blog: Halation and its simulation in Dehancer"
     url: https://blog.dehancer.com/halation/
-  - title: "Halation vs Bloom vs Flare: How to Shape Light — VSCO (31 December 2025)"
+  - title: "VSCO: Halation vs Bloom vs Flare: How to Shape Light (31 December 2025)"
     url: https://www.vsco.co/learn/halation-vs-bloom-vs-lens-flare
-  - title: "CineStill 800T Profile: Tungsten Film, Halation Glow, and Night Streets — Unique Photo (26 September 2026)"
+  - title: "Unique Photo: CineStill 800T Profile: Tungsten Film, Halation Glow, and Night Streets (26 September 2026)"
     url: https://www.uniquephoto.com/photoinsider/cinestill-800t-profile-tungsten-film-halation-glow-and-night-streets
 faq:
   - q: "What causes halation in film photos?"

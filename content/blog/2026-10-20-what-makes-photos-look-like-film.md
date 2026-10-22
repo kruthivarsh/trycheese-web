@@ -8,15 +8,15 @@ topic: film-looks
 keyword: what makes a photo look like film
 tags: [film looks, film grain, halation, colour negative, slide film, phone photography]
 sources:
-  - title: "Kodak Professional Portra 400 Film, technical data E-4050 — Kodak Alaris (January 2025)"
+  - title: "Kodak Alaris: Kodak Professional Portra 400 Film, technical data E-4050 (January 2025)"
     url: https://kodakprofessional.com/sites/default/files/2025-07/e4050.pdf
-  - title: "Film Compression — Dehancer"
+  - title: "Dehancer: Film Compression"
     url: https://dehancer.com/learn/article/film-compression
-  - title: "How does film grain work in Dehancer OFX plugin — Dehancer"
+  - title: "Dehancer: How does film grain work in Dehancer OFX plugin"
     url: https://www.dehancer.com/learn/articles/how-does-film-grain-work-in-dehancer-ofx-plugin
-  - title: "Film Simulation \"CLASSIC CHROME\" — Fujifilm X Stories (2014)"
+  - title: "Fujifilm X Stories: Film Simulation \"CLASSIC CHROME\" (2014)"
     url: https://www.fujifilm-x.com/global/stories/film-simulation-classic-chrome/
-  - title: "7 can't-miss updates from our Pixel 11 launch — Google"
+  - title: "Google: 7 can't-miss updates from our Pixel 11 launch"
     url: https://blog.google/products-and-platforms/devices/pixel/pixel-11-features/
 faq:
   - q: "What makes a photo look like film?"
