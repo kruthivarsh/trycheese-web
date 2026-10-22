@@ -3,7 +3,7 @@ title: "What is halation? The red glow around lights, explained"
 slug: what-is-halation
 description: "What is halation? Why film puts a red-orange glow around streetlights, how it differs from bloom and lens flare, and how to spot a convincing digital version."
 date: 2026-10-11
-updated: 2026-10-20
+updated: 2026-10-22
 topic: grain-and-halation
 keyword: what is halation
 tags: [halation, film grain, film looks, bloom, cinestill 800t, film photography]
@@ -35,7 +35,7 @@ Film is a stack of very thin layers. When light from a bright source hits it, mo
 
 Exactly where the light bounces back from depends on who you ask. Analog.Cafe's explainer argues the main culprit is total internal reflection at the boundary between the back of the film base and the air behind it. Dehancer's write-up describes light reflecting off the camera's inner surfaces. The mechanism is the same either way: light escapes the emulsion and comes back.
 
-Halation happens in black-and-white film too. Without colour layers, it simply shows up as a white glow instead of a red one.
+Halation happens in black-and-white film too. Without colour layers, it simply shows up as a white glow instead of a red one. Glow is one of three things behind [the black and white film look](/blog/black-and-white-film-look), alongside grain and how film turns colour into grey.
 
 ## Why the glow is red (and sometimes orange)
 

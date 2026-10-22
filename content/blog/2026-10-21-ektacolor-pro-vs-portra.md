@@ -3,6 +3,7 @@ title: "Ektacolor Pro vs Portra: Kodak's new film names explained"
 slug: ektacolor-pro-vs-portra
 description: "Ektacolor Pro vs Portra, Ektapan vs T-Max: what Kodak's 2026 film names mean, why Eastman Kodak renamed them, and whether the film inside has changed."
 date: 2026-10-21
+updated: 2026-10-22
 topic: film-photography
 keyword: Ektacolor Pro vs Portra
 tags: [film photography, kodak, portra, ektacolor pro, ektapan, colour negative]
@@ -61,7 +62,7 @@ The paperwork backs that up, with one caveat. Kodak's page calls Ektacolor Pro 4
 
 The caveat: the Kodak product pages we read don't mention Portra or T-Max by name. The "same emulsion" claim comes from coverage of the launch, not from a Kodak statement on those pages, and none of that coverage reported any difference in results.
 
-So if you have a favourite way to expose and develop Portra 400, it should carry straight over. Same C-41 development, same box speed, same habits. The same goes for Ektapan and your usual T-Max developer.
+So if you have a favourite way to expose and develop Portra 400, it should carry straight over. Same C-41 development, same box speed, same habits. The same goes for Ektapan and your usual T-Max developer. If black and white is new to you, here's [how film turns colour into grey, and where fine grain like T-Max's fits](/blog/black-and-white-film-look).
 
 ## Why Kodak renamed Portra and T-Max
 
