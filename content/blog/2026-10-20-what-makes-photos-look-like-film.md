@@ -3,7 +3,7 @@ title: "What makes a photo look like film? 6 tells, explained"
 slug: what-makes-photos-look-like-film
 description: "What makes a photo look like film? Highlight roll-off, stock colour, grain, halation and softness: how each one works, and how to spot a fake film look."
 date: 2026-10-20
-updated: 2026-10-21
+updated: 2026-10-23
 topic: film-looks
 keyword: what makes a photo look like film
 tags: [film looks, film grain, halation, colour negative, slide film, phone photography]
@@ -66,7 +66,7 @@ Phone makers have noticed. Google says some of the Pixel 11's new Camera Looks w
 
 ## Texture: grain, halation and softness
 
-**Grain.** On film, the image is made of grain. It isn't noise sprinkled on top. Dehancer's write-up on its grain engine makes two useful points. First, grain has structure, so it can't be smaller than a certain size without turning into plain noise. Second, it lives in both the highlights (where a negative is densest) and the deep shadows. Dehancer contrasts grain generated from the image's own colour and brightness with scanned grain laid over a photo, which isn't tied to what's in the frame. Grain can also be very fine: Kodak calls Portra 400 "the world's finest grain high-speed color negative film". Fine grain is still grain.
+**Grain.** On film, the image is made of grain. It isn't noise sprinkled on top. Dehancer's write-up on its grain engine makes two useful points. First, grain has structure, so it can't be smaller than a certain size without turning into plain noise. Second, it lives in both the highlights (where a negative is densest) and the deep shadows. Dehancer contrasts grain generated from the image's own colour and brightness with scanned grain laid over a photo, which isn't tied to what's in the frame. Grain can also be very fine: Kodak calls Portra 400 "the world's finest grain high-speed color negative film". Fine grain is still grain. Here's [how film grain differs from digital noise](/blog/film-grain-vs-digital-noise), and why that matters.
 
 **Halation.** Around strong lights, colour film picks up a red-orange halo as light bounces back through the emulsion. It's one of the clearest film tells, and one of the most often faked. We explain [how halation forms and how to spot a convincing version](/blog/what-is-halation) in its own post.
 
