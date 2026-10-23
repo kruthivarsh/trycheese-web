@@ -7,7 +7,7 @@ import { PostCard } from "@/components/blog-ui";
 import { FilmFrame, SampleTag } from "@/components/film-frame";
 import { StoreBadges } from "@/components/store-badges";
 import { LOOKS, look } from "@/lib/looks";
-import { SITE } from "@/lib/site";
+import { COMPANY, SITE } from "@/lib/site";
 
 /** A strip of look stickers scrolling past, between the hero and the manifesto. */
 export function LookMarquee() {
@@ -461,6 +461,7 @@ export function Footer() {
             <li><Link className="hover:text-paper" href="/terms">Terms of Use</Link></li>
             <li><Link className="hover:text-paper" href="/community-guidelines">Community guidelines</Link></li>
             <li><Link className="hover:text-paper" href="/delete-account">Delete account</Link></li>
+            <li><Link className="hover:text-paper" href="/privacy#grievance-officer">Grievance Officer</Link></li>
             <li><a className="hover:text-paper" href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
           </ul>
         </div>
@@ -505,7 +506,7 @@ export function Footer() {
             </nav>
             <a
               className="inline-flex text-paper/60 transition-colors hover:text-paper"
-              href="mailto:support@trycheese.app"
+              href={`mailto:${SITE.email}`}
               aria-label="Email trycheese support"
             >
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
@@ -516,10 +517,10 @@ export function Footer() {
           </div>
 
           <div className="mt-7 flex flex-col gap-2">
-            <p className="text-[12px] tracking-[0.03em] text-paper/55">Copyright ©2026 overads Inc. All rights reserved.</p>
+            <p className="text-[12px] tracking-[0.03em] text-paper/55">Copyright ©2026 {COMPANY.name}. All rights reserved.</p>
             <p className="max-w-[90ch] text-[10.5px] leading-[1.85] tracking-[0.01em] text-paper/30 text-pretty">
-              overads®, trycheese™ and the overads logo are trademarks of overads private limited (a subsidiary of
-              overads Inc.). Registered in India, with applications pending in the United States.
+              overads®, trycheese™ and the overads logo are trademarks of {COMPANY.name} (a subsidiary of{" "}
+              {COMPANY.parent}). Registered in India, with applications pending in the United States.
             </p>
             <p className="mt-1 inline-flex items-center gap-1.5 self-start whitespace-nowrap text-[11px] font-light uppercase tracking-[0.14em] text-paper/40 sm:self-end">
               Made with{" "}

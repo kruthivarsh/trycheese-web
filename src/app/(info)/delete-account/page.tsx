@@ -103,11 +103,13 @@ export default function DeleteAccountPage() {
               token, until Apple confirms we&rsquo;ve disconnected it (we stop
               trying after about 10 days).
             </li>
-            <li>
-              Copies of shared photos can stay in caches for up to a year, and
-              data can stay in backups until they expire.
-            </li>
+            <li>Copies of shared photos can stay in caches for up to a year.</li>
           </ul>
+          <p>
+            Records with no time limit aren&rsquo;t deleted on a schedule yet. We
+            review what we store at least once a year and delete what we no
+            longer need.
+          </p>
           <p>
             How long each of these is kept is in the{" "}
             <Link href="/privacy#how-long-we-keep-it">privacy policy</Link>.
@@ -124,6 +126,9 @@ export default function DeleteAccountPage() {
             Signed in with Apple and hid your email? Use your private relay
             address (it ends in privaterelay.appleid.com), or delete the account
             in the app. Still stuck? Email {mail} and tell us your username.
+            We check the request comes from the account&rsquo;s owner first, and
+            an account we delete because of an emailed request is deleted for
+            good straight away, without the 30 days.
           </p>
           <p>
             The <Link href="/privacy#delete-your-account">privacy policy</Link>{" "}
